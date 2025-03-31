@@ -10,13 +10,13 @@ function sortear(){
 
     if (inicio > final){
         alert(`Opa, o número final é maior que o inicial`);
-        reiniciar()
-    } else {
-        numeros = escolherNumeros(inicio, final, quantidadeNumeros);
-        console.log(numeros)
-        alterarTextoResultados(numeros)
-        alterarStatusBotao();
+        return();
     }
+    
+    numeros = escolherNumeros(inicio, final, quantidadeNumeros);    
+    console.log(numeros)
+    alterarTextoResultados(numeros)
+    alterarStatusBotao();
 
     
 
