@@ -8,12 +8,17 @@ function sortear(){
     let final = parseInt(document.getElementById('ate').value);
     console.log(`numero final ${final}`);
 
-    numeros = escolherNumeros(inicio, final, quantidadeNumeros);
-    console.log(numeros)
+    if (inicio > final){
+        alert(`Opa, o número final é maior que o inicial`);
+        reiniciar()
+    } else {
+        numeros = escolherNumeros(inicio, final, quantidadeNumeros);
+        console.log(numeros)
+        alterarTextoResultados(numeros)
+        alterarStatusBotao();
+    }
 
-    alterarTextoResultados(numeros)
-
-    alterarStatusBotao();
+    
 
 }
 
