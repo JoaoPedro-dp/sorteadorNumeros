@@ -11,12 +11,15 @@ function sortear(){
     if (inicio > final){
         alert(`Opa, o número final é maior que o inicial`);
         reiniciar();
+    } else if (quantidadeNumeros > (final - inicio+1)){
+        alert(`Nao existem ${quantidadeNumeros} entre ${inicio} e ${final}`);
+        reiniciar();
+
     } else {
         numeros = escolherNumeros(inicio, final, quantidadeNumeros);    
-        console.log(numeros)
-        alterarTextoResultados(numeros)
+        console.log(numeros);
+        alterarTextoResultados(numeros);
         alterarStatusBotao();
-
     }
     
     
